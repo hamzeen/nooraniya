@@ -14,6 +14,25 @@ structure and purpose
 3. Run `npm run start`
 4. Visit http://localhost:3000
 
+
+## Deploy to Heroku
+
+1. `git init`
+2. `npm install`
+3. `npm run start`
+4. Ctl + C
+
+5. `heroku login`
+5. `heroku apps:create nest_json_hamzeen`
+6. `git add .`
+7. `git commit -m "commit message"`
+8. `git push heroku master`
+9. heroku open
+10. heroku logs —tail
+
+1. heroku apps:rename new --app old name
+
+
 ## License
 
 The MIT License (MIT)
