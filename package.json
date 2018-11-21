@@ -1,0 +1,14 @@
+{
+  "name": "nooraniya-alumni-app",
+  "private": true,
+  "description": "nooraniya alumni registry",
+  "version": "0.0.1",
+  "main": "app.js",
+  "scripts": {
+    "build": "node src/build.js",
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "marked": "0.3.6"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "1990",
+  "students": [
+    {
+      "name": "Wazeem Akram",
+      "stuId": "3412"
+    },
+    {
+      "name": "Sahira",
+      "stuId": "3413"
+    },
+    {
+      "name": "Rizana",
+      "stuId": "3414"
+    },
+    {
+      "name": "Rashida",
+      "stuId": "3415"
+    }
+  ]
+}
