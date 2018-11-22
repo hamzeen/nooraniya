@@ -1,4 +1,4 @@
-# NEST: Blogging for Humans
+# NEST-JSON: Blogging for Humans
 
 This variant of [NEST](https://github.com/hamzeen/nest) blogging platform, uses flat JSON files as its building blocks. A testimony to its flexibility & sleek design.
 
