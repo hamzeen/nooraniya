@@ -1,6 +1,6 @@
-# blog using Node.js & MD
+# NEST: Blogging for Humans
 
-structure and purpose
+This variant of [NEST](https://github.com/hamzeen/nest) blogging platform, uses flat JSON files as its building blocks. A testimony to its flexibility & sleek design.
 
 ## Requirements
 
