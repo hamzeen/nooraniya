@@ -1,6 +1,8 @@
 # NEST-JSON: Blogging for Humans
 
-This variant of [NEST](https://github.com/hamzeen/nest) blogging platform, uses flat JSON files as its building blocks. A testimony to its flexibility & sleek design.
+This repository holds a variant of [NEST](https://github.com/hamzeen/nest) blogging platform, uses flat JSON files as its building blocks. 
+
+NEST was built purely with simplicity in mind. Simplicity in its architecture & simplicity in every step of the way till you finally spin up your blog. Yet, it doesn't compromise on the scalbility as your content grows over time. The first proof of concept for NEST came to life in April 2018.
 
 ## Requirements
 
