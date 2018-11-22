@@ -5,7 +5,6 @@ structure and purpose
 ## Requirements
 
 * [Node.js](http://nodejs.org/)
-* [Git](https://git-scm.com/)
 
 ## Installation Steps
 
