@@ -19,17 +19,16 @@ structure and purpose
 
 1. `git init`
 2. `npm install`
-3. `npm run start`
+3. `npm run build && npm start`
 4. Ctl + C
 
 5. `heroku login`
 5. `heroku apps:create nest_json_hamzeen`
-6. `git add .`
-7. `git commit -m "commit message"`
+6. `git add . && git commit -m "commit message"`
 8. `git push heroku master`
-9. heroku open
-10. heroku logs —tail
+9. `heroku open && heroku logs —tail`
 
+## Rename a Deployed App
 1. heroku apps:rename new --app old name
 
 
