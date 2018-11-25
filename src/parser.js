@@ -25,7 +25,6 @@ function readTextFile(relativePath, fn) {
 function getAccordionMarkup(students) {
 
   var accordion = "<div class='accordion js-accordion'>";
-  /* class="ion-search" */
 
   for(var k in students) {
     accordion += "<div class=\"accordion__item js-accordion-item\">";
@@ -39,9 +38,45 @@ function getAccordionMarkup(students) {
     accordion +=
     "<div class=\"accordion-body js-accordion-body\">\n" +
       "<div class=\"accordion-body__contents\">\n" +
-      "Lorem ex vero, sunt veritatis esse. Nostrum voluptatum et repudiandae vel sed, explicabo in?\n" +
+
+      "      <div class=\"flex-container\">\n" +
+      "      <div class=\"flex-item\">\n" +
+      "        <div>\n" +
+      "          <h5 class=\"ion-android-phone-portrait\">&nbsp;Phone</h5>\n" +
+      "          <p>+94 (0)77 7056 485</p>\n" +
+      "        </div>\n" +
+      "        <div class=\"margin-top20\">\n" +
+      "          <h5 class=\"ion-chatbubbles\">Email</h5>\n" +
+      "          <p>steve@mymmail.com</p>\n" +
+      "        </div>\n" +
+      "      </div>\n" +
+      "\n" +
+      "      <div class=\"flex-item gravity\">\n" +
+      "        <div>\n" +
+      "          <h5 class=\"ion-university\">Graduate</h5>\n" +
+      "          <p>Yes</p>\n" +
+      "        </div>\n" +
+      "        <div class=\"margin-top20\">\n" +
+      "          <h5 class=\"ion-paintbucket\">Donation (per month)</h5>\n" +
+      "          <h2>LKR 200</h2>\n" +
+      "        </div>\n" +
+      "      </div>\n" +
+      "\n" +
+      "      <div class=\"flex-item\">\n" +
+      "        <div>\n" +
+      "          <h5 class=\"ion-android-mail\">Address</h5>\n" +
+      "          <p>21A, katuga'watta, dewanagala, Sri Lanka</p>\n" +
+      "        </div>\n" +
+      "        <div class=\"margin-top20\">\n" +
+      "          <h5 class=\"ion-pricetags\">Gender</h5>\n" +
+      "          <p>Male</p>\n" +
+      "        </div>\n" +
+      "      </div>\n" +
+      "    </div>"+
       "</div>" +
     "</div>";
+
+
 
 
     accordion += "</div>";
@@ -52,10 +87,16 @@ function getAccordionMarkup(students) {
   return accordion;
 }
 
+function getTitleMarkup(title) {
+  return "<div class=\"content-sections\">" + "\n"
+    + "<h1 class='post-title'>" + title + "</h1>";
+}
+
 
 module.exports = {
     mustacheTemplate: mustache,
     readTextFile: readTextFile,
     marked: marked,
-    getAccordionMarkup: getAccordionMarkup
+    getAccordionMarkup: getAccordionMarkup,
+    getTitleMarkup: getTitleMarkup
 };

@@ -27,7 +27,8 @@ ul.global-nav li a {
     transition: all .3s;
 }
 a {
-    color: #0085d4;
+    /*color: #0085d4;*/
+    color: #21c54c;
     text-decoration: none;
     transition: all .3s;
 }
@@ -88,6 +89,7 @@ ul.global-nav {
 li#search-button {
   float: right;
   margin-right: 10px;
+  cursor: pointer;
 }
 
 ul.global-nav li {
@@ -122,13 +124,14 @@ ul.global-nav li a {
     animation: sprite-bg-animation 42s 0s linear infinite;
 }
 .blog-title h2 {
-    color: #fff;
+    color: #2b655a;
     padding: 40px;
     display: inline-block;
     line-height: 1.5;
     width: 100%;
     height: 100%;
-    background: rgba(6, 45, 60, 0.95) url(http://hamzeen.github.io/deprecated-landing/assets/bg_texture.png);
+    background: rgba(232, 206, 37, 0.93) url(http://hamzeen.github.io/deprecated-landing/assets/bg_texture.png);
+    text-shadow: 1px 1px 3px #b75e5e;
 }
 .blog-title:after {
     content: "";
@@ -184,6 +187,8 @@ main {
     padding: 3.5em 0;
     background: #fff;
     /*background-image: url("http://www.designbolts.com/wp-content/uploads/2012/12/Subtle-Dots-White-Tileable-pattern.jpg");*/
+    word-wrap: break-word;
+    background: #f3f3f3;
 }
 @media screen and (min-width: 1100px) {
     main {
@@ -206,7 +211,7 @@ main {
     margin: 0 auto 2em;
     padding: 20px;
     background: #fff;
-    border-top: 8px solid #f45145;
+    border-top: 6px solid #26d01b85;
     box-shadow: 0px 0px 1px 0px #888;
 }
 
@@ -224,7 +229,7 @@ aside {
 aside h2 {
     text-align: center;
     margin-bottom: 1.75em;
-    color: #d03328;
+    color: rgb(6, 45, 60);
 }
 
 .blog-container {
@@ -288,6 +293,17 @@ footer {
     height: 4.5em;
 }
 
+h1.post-title {
+    padding-bottom: 0.3em;
+    font-size: 2em;
+    border-bottom: 1px solid #eaecef;
+    margin-top: 24px;
+    margin-bottom: 16px;
+    font-weight: 100;
+    line-height: 1.25;
+
+}
+
 /*********** ACCORDION *************/
 .accordion {
     font-size: 1rem;
@@ -296,6 +312,13 @@ footer {
     border-radius: 5px;
 }
 
+/*.accordion__item {
+    border-bottom: 1px solid #efefe0;
+}
+.accordion__item:last-child {
+    border-bottom: none;
+}*/
+
 .accordion-header,
 .accordion-body {
     background: white;
@@ -303,37 +326,36 @@ footer {
 
 .accordion-header {
     padding: 1.5em 1.5em;
-    background: rgba(63, 81, 170, .9);
+    /*background: rgba(63, 81, 170, .9);*/
+    background: #f8f8f8;
+
     text-transform: uppercase;
-    color: white;
+    color: #000;
     cursor: pointer;
     font-size: .9em;
     letter-spacing: .1em;
     transition: all .3s;
 }
 
+.accordion__item:nth-child(odd) .accordion-header {
+    background: #1bd0851a;
+}
+
+
 .accordion-header:hover {
-    background: rgba(60, 80, 155, .85);
-    /*background: #2D3D99;*/
     position: relative;
     z-index: 5;
 }
 
 .accordion-body {
-    background: #f8f8f8;
+    background: #f9fffd;
     color: #505050;
-
-    /*background: #F2F5F0;
-    color: #306d94;
-    color: #303059;*/
     font-size: 20px;
-    /*background: #fcfcfc;
-    color: #3f3c3c;*/
     display: none;
 }
 
 .accordion-body__contents {
-    padding: 1.5em 1.5em;
+    padding: 1em .3em;
     font-size: .85em;
 }
 
@@ -361,8 +383,8 @@ footer {
 }
 
 .accordion__item.active .accordion-header {
-    background: rgba(60, 80, 160, .9);
-    /*background: #2D3D99;*/
+    /*background: rgba(60, 80, 160, .9);*/
+    background: #ee0;
 }
 
 .accordion__item .accordion__item .accordion-header {
@@ -371,19 +393,19 @@ footer {
 }
 
 .accordion__item.js-accordion-item {
-    /*border-bottom: 1px solid rgb(131, 127, 199);*/
-    border-bottom: 1px solid rgba(70, 79, 138, 0.58);
+    /*border-bottom: 1px solid rgb(131, 127, 199);
+    border-bottom: 1px solid rgba(70, 79, 138, 0.58);*/
 }
 
 .accordion-header:hover .stud-name {
     margin-left: 8px;
 }
 
-@media screen and (max-width: 1000px) {
+/*@media screen and (max-width: 1000px) {
     .accordion {
         width: 100%;
     }
-}
+}*/
 
 /* Animation on Accordion Header Hover */
 .stud-name {
@@ -393,6 +415,82 @@ footer {
 .ion-android-contacts:before {
     margin-right: 10px;
 }
+
+
+.flex-container {
+    padding: 15px 0;
+    margin: 0;
+}
+.flex-item {
+    flex-basis: 100%;
+    padding: 5px 5px 5px 10px;
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+    word-break: break-all;
+}
+
+.gravity-center {
+    margin: auto 0;
+}
+
+.flex-item:first-child,
+.flex-item:last-child {
+    border: none;
+}
+
+@media screen and (min-width: 660px) {
+    .flex-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    .flex-item {
+        flex: 1;
+    }
+    .flex-item:first-child {
+        border-right: 1px dotted #ccc;
+    }
+    .flex-item:last-child {
+        border-left: 1px dotted #ccc;
+    }
+}
+
+.flex-item h2 {
+    color: #3d5;
+    font-size: 25px;
+    font-weight: 200;
+    margin: 0px;
+    padding: 0px;
+    margin-left: 36px;
+}
+.flex-item h5 {
+    color: #5c5c65b2;
+    font-size: 17px;
+    font-weight: 100;
+    line-height: 21px;
+    margin: 0px;
+    padding: 0px;
+    left: 20px;
+}
+
+.flex-item h5:before {
+    padding-right: 10px;
+    font-size: 24px;
+    vertical-align: middle;
+}
+
+.flex-item p {
+    color: #210;
+    font-size: 19px;
+    margin: 0px;
+    margin-left:34px;
+    padding: 0px;
+}
+
+.margin-top20 {
+    margin-top: 20px;
+}
+
 
 
 

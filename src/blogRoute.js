@@ -71,8 +71,9 @@ BlogRoute.prototype.renderPost = function renderPost(err, html) {
   }
 
   var jsonData = JSON.parse(this.rawContent);
-  const htmlContent = "<h1>" + jsonData.name + "</h1>" +
-    this.message.getAccordionMarkup(jsonData.students);
+  const htmlContent = this.message.getTitleMarkup(jsonData.name) + "\n"
+    + this.message.getAccordionMarkup(jsonData.students) + "</div>";
+
 
   this.navigationContent = fileNamesToHyperlinks(temp('./data/'));
   var responseContent = this.message.mustacheTemplate(html, { postContent: htmlContent });

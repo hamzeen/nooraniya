@@ -6,7 +6,9 @@
   "main": "app.js",
   "scripts": {
     "build": "node src/build.js",
-    "start": "node app.js"
+    "start": "node app.js",
+    "prelaunch": "npm run build",
+    "launch": "npm run start"
   },
   "dependencies": {
     "marked": "0.3.6"

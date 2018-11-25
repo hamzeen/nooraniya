@@ -21,8 +21,7 @@ function Build() {
 
         for(var i = 0; i < jsonFiles.length; i++) {
           var jsonData = JSON.parse(jsonFiles[i].markdown);
-          this.htmlContent += "<div class=\"content-sections\">" +
-              "<h1>" + jsonData.name + "</h1>" +
+          this.htmlContent += Parser.getTitleMarkup(jsonData.name) + "\n" +
               Parser.getAccordionMarkup(jsonData.students) + "</div>";
 
           this.navigationContent += "<figure class=\"blog-post\"><a href=\'blog/" +
@@ -103,7 +102,7 @@ function Build() {
             if(exists) {
                 fs.unlinkSync(filePath);
             }
-            fs.writeFile(filePath, content, 'utf-8');
+            fs.writeFileSync(filePath, content, 'utf-8');
         });
     };
 };
