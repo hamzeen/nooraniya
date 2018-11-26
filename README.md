@@ -10,7 +10,7 @@ NEST was built purely with simplicity in mind. Simplicity in its architecture, s
 
 ## Getting Started (Beginners on Windows)
 
-** if you have run this once, ignore steps 4 & 5 **
+**if you have run this once, ignore steps 4 & 5 **
 1. Make sure you are on a desktop PC when you follow this, can not do follow it on a phone!
 2. Click the 'Green Download' button above on the top-right corner & choose 'Download as Zip'
 3. Once you download: extract the .zip file & delete nooraniya-master.zip
