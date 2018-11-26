@@ -15,7 +15,7 @@ NEST was built purely with simplicity in mind. Simplicity in its architecture, s
 2. Click the 'Green Download' button above on the top-right corner & choose 'Download as Zip'
 3. Once you download: extract the .zip file & delete nooraniya-master.zip
 4. [Can be ignored but advisible] Rename the extracted folder to "noornaiya" instead of "nooraniya-master"
-5. [Can be Ignores if you have Node.js] Make sure you have Node.js installed.
+5. [Can be Ignored if you have Node.js] Make sure you have Node.js installed.
 6. Go inside this folder from command promt(CMD)& type `npm install` & press enter
 7. Once the above step is complete, type `npm run launch` & press enter
 8. Open your browser & visit http://localhost:3000 to see the magic!
