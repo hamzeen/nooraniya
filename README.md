@@ -20,6 +20,9 @@ NEST was built purely with simplicity in mind. Simplicity in its architecture, s
 7. Once the above step is complete, type `npm run launch` & press enter
 8. Open your browser & visit http://localhost:3000 to see the magic!
 
+### Additional:
+if you dont have an editor to open json files, download this editor: https://atom.io/
+
 ## Installation Steps (for admins)
 
 1. Clone repo
