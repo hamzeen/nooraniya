@@ -8,7 +8,19 @@ NEST was built purely with simplicity in mind. Simplicity in its architecture, s
 
 * [Node.js](http://nodejs.org/)
 
-## Installation Steps
+## Getting Started (Beginners on Windows)
+
+** if you have run this once, ignore steps 4 & 5 **
+1. Make sure you are on a desktop PC when you follow this, can not do follow it on a phone!
+2. Click the 'Green Download' button above on the top-right corner & choose 'Download as Zip'
+3. Once you download: extract the .zip file & delete nooraniya-master.zip
+4. [Not mandatory, Highly advisible] Rename the extracted folder to "noornaiya" instead of "nooraniya-master"
+5. [Ignore if you already have Node.js] Make sure you have Node.js installed.
+6. Go inside this folder from command promt(CMD)& type `npm install` & press enter
+7. Once the above step is complete, type `npm run launch` & press enter
+8. Open your browser & visit http://localhost:3000 to see the magic!
+
+## Installation Steps (for admins)
 
 1. Clone repo
 2. Run `npm install`
@@ -16,7 +28,7 @@ NEST was built purely with simplicity in mind. Simplicity in its architecture, s
 4. Visit http://localhost:3000
 
 
-## Deploy to Heroku
+## Deploy to Heroku (for admins)
 
 1. `git init`
 2. `npm install`
@@ -29,7 +41,7 @@ NEST was built purely with simplicity in mind. Simplicity in its architecture, s
 8. `git push heroku master`
 9. `heroku open && heroku logs —tail`
 
-## Rename a Deployed App
+## Rename a Deployed App (for admins)
 1. heroku apps:rename new --app old name
 
 
