@@ -3,11 +3,23 @@
   "students": [
     {
       "name": "M.R. Fazeer",
-      "stuId": "3422"
+      "stuId": "3422",
+      "phone": "+94 (0)77 7056 485",
+      "email": "fazir@mymail.com",
+      "graduate": "NO",
+      "donation": "LKR 200",
+      "address": "20, Rockhill, Kegalle, Sri Lanka",
+      "gender": "MALE"
     },
     {
-      "name": "M.H.M. Hamzeen",
-      "stuId": "3423"
+      "name": "M.H.M. Niyas",
+      "stuId": "3420",
+      "phone": "+94 (0)77 8076 480",
+      "email": "mhm@mymail.com",
+      "graduate": "YES",
+      "donation": "LKR 450",
+      "address": "21A, katuga'watta, dewanagala, Sri Lanka",
+      "gender": "MALE"
     }
   ]
 }
