@@ -3,19 +3,23 @@
   "students": [
     {
       "name": "Wazeem Akram",
-      "stuId": "3412"
-    },
-    {
-      "name": "Sahira",
-      "stuId": "3413"
-    },
-    {
-      "name": "Rizana",
-      "stuId": "3414"
+      "stuId": "3412",
+      "phone": "+94 (0)77 3035 101",
+      "email": "wazimakram@mymail.com",
+      "graduate": "YES",
+      "donation": "LKR 12,000",
+      "address": "45, Uyanwatte, Dewanagala, Sri Lanka",
+      "gender": "MALE"
     },
     {
       "name": "Rashida",
-      "stuId": "3415"
+      "stuId": "3415",
+      "phone": "+94 (0)77 0440 303",
+      "email": "wazimakram@mymail.com",
+      "graduate": "YES",
+      "donation": "LKR 100",
+      "address": "57, Uyanwatte, Dewanagala, Sri Lanka",
+      "gender": "FEMALE"
     }
   ]
 }
