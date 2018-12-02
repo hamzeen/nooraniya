@@ -43,33 +43,33 @@ function getAccordionMarkup(students) {
       "      <div class=\"flex-item\">\n" +
       "        <div>\n" +
       "          <h5 class=\"ion-android-phone-portrait\">&nbsp;Phone</h5>\n" +
-      "          <p>+94 (0)77 7056 485</p>\n" +
+      "          <p>"+ students[k].phone +"</p>\n" +
       "        </div>\n" +
       "        <div class=\"margin-top20\">\n" +
       "          <h5 class=\"ion-chatbubbles\">Email</h5>\n" +
-      "          <p>steve@mymmail.com</p>\n" +
+      "          <p>" + students[k].email +"</p>\n" +
       "        </div>\n" +
       "      </div>\n" +
       "\n" +
       "      <div class=\"flex-item gravity\">\n" +
       "        <div>\n" +
       "          <h5 class=\"ion-university\">Graduate</h5>\n" +
-      "          <p>Yes</p>\n" +
+      "          <p>"+ students[k].graduate+"</p>\n" +
       "        </div>\n" +
       "        <div class=\"margin-top20\">\n" +
       "          <h5 class=\"ion-paintbucket\">Donation (per month)</h5>\n" +
-      "          <h2>LKR 200</h2>\n" +
+      "          <h2>"+ students[k].donation +"</h2>\n" +
       "        </div>\n" +
       "      </div>\n" +
       "\n" +
       "      <div class=\"flex-item\">\n" +
       "        <div>\n" +
       "          <h5 class=\"ion-android-mail\">Address</h5>\n" +
-      "          <p>21A, katuga'watta, dewanagala, Sri Lanka</p>\n" +
+      "          <p>"+ students[k].address +"</p>\n" +
       "        </div>\n" +
       "        <div class=\"margin-top20\">\n" +
       "          <h5 class=\"ion-pricetags\">Gender</h5>\n" +
-      "          <p>Male</p>\n" +
+      "          <p>"+ students[k].gender +"</p>\n" +
       "        </div>\n" +
       "      </div>\n" +
       "    </div>"+
