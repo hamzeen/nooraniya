@@ -8,7 +8,6 @@ var accordion = (function(){
   var settings = {
     // animation speed
     speed: 400,
-
     // close all other accordion items if true
     oneOpen: false
   };
@@ -76,7 +75,7 @@ $(document).ready(function(){
 
   function isExist(ary, match) {
     match = match.toString().toLowerCase();
-    console.log(ary);
+    // console.log(ary);
     const result = ary.students.filter(obj => {
       return Object.keys(obj).find(key => {
         if (typeof obj[key] === 'number' || typeof obj[key] === 'string') {
@@ -97,7 +96,7 @@ $(document).ready(function(){
       for (let i = 0; i < pages.length; i++) {
         $.ajax(getBaseUrl() + "/data/" + pages[i], {
           success: function(data) {
-            console.log('done');
+            // console.log('done');
 
             if(isExist(JSON.parse(data), userSearch)) {
               parsedRes.push(pages[i]);
@@ -139,6 +138,5 @@ $(document).ready(function(){
     }
     return html;
   }
-
 
 });
