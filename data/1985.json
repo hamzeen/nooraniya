@@ -3,7 +3,13 @@
   "students": [
     {
       "name": "Ilham",
-      "stuId": "1999"
+      "stuId": "1999",
+      "phone": "+94 (0)77 3031 441",
+      "email": "ilham@mymail.com",
+      "graduate": "YES",
+      "donation": "LKR 9,000",
+      "address": "60, Katugahwatte, Dewanagala, Sri Lanka",
+      "gender": "MALE"
     }
   ]
 }
