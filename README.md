@@ -39,7 +39,7 @@ if you dont have an editor to open json files, download this editor: https://ato
 4. Ctl + C
 
 5. `heroku login`
-5. `heroku apps:create nest_json_hamzeen`
+5. `heroku apps:create nestjson`
 6. `git add . && git commit -m "commit message"`
 8. `git push heroku master`
 9. `heroku open && heroku logs —tail`
