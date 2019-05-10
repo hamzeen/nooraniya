@@ -1,8 +1,6 @@
 "use strict";
 
-
 function Build() {
-
     var fs = require('fs');
     var path = require('path');
     var marked = require('marked');
@@ -31,7 +29,7 @@ function Build() {
           // @TODO should loop this entirely!
           this.navigationContent += "<figure class=\"blog-post\"><a href=\'blog/" +
             jsonFiles[i].fName + "\'>" + "<h3 class=\"ion-android-contacts blog-titles\">" + jsonData.name +
-            "</h3></a></figure>\n"
+            "</h3></a></figure>\n";
         }
 
         // !IMP 03. augment this on index.html
@@ -42,14 +40,14 @@ function Build() {
     this.getMarkdownFiles = function(folderPath) {
         var list = [];
 
-        if(fs.existsSync(folderPath)) {
+        if (fs.existsSync(folderPath)) {
             var files = fs.readdirSync(folderPath), i, stat, file, output, markdown;
 
             for(i = 0; i < files.length; i++) {
                 file = path.resolve(folderPath, files[i]);
                 stat = fs.statSync(file);
 
-                if(stat.isFile() && files[i].substr(-5) === '.json') {
+                if (stat.isFile() && files[i].substr(-5) === '.json') {
                     markdown = fs.readFileSync(file, 'utf8');
                     list.push({
                       markdown: markdown,
@@ -61,8 +59,7 @@ function Build() {
         return list;
     };
 
-
-    // Step4: augment the md content and request to gen index.html
+    // Step 4: writes the augmented html file
     this.buildPage = function renderPost(html) {
       var responseContent = this.mustache(html,            { postContent: this.htmlContent });
       responseContent     = this.mustache(responseContent, { navigation: this.navigationContent });
@@ -72,7 +69,7 @@ function Build() {
       this.writeToFile(responseContent);
     };
 
-    // For Step 3
+    // Step 3:
     this.mustache = function(text, data) {
       var result = text;
       for (var prop in data) {
@@ -113,5 +110,4 @@ function Build() {
 };
 
 module.exports = Build;
-
 new Build().initialize();
