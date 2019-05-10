@@ -7,6 +7,7 @@ function Build() {
     var path = require('path');
     var marked = require('marked');
     const Parser = require('./parser');
+    const config = require('../nest-config');
 
     // get posts path & num of posts to show from config
     var maxPosts = 2;
@@ -16,23 +17,25 @@ function Build() {
     this.navigationContent = '';
 
     this.initialize = function() {
-        // 1. read the posts from data folder
+        // !IMP 01. read the posts from data folder
         var jsonFiles = this.getMarkdownFiles('./data/');
-
-        for(var i = 0; i < jsonFiles.length; i++) {
+        
+        const numOfPostsOnHome = (jsonFiles.length < maxPosts) ? jsonFiles.length : maxPosts;
+        for(var i = 0; i < numOfPostsOnHome; i++) {
           var jsonData = JSON.parse(jsonFiles[i].markdown);
+
+          // !IMP 02. transform each of them to markup
           this.htmlContent += Parser.getTitleMarkup(jsonData.name) + "\n" +
               Parser.getAccordionMarkup(jsonData.students) + "</div>";
 
+          // @TODO should loop this entirely!
           this.navigationContent += "<figure class=\"blog-post\"><a href=\'blog/" +
-            jsonFiles[i].fName + "\'>" + "<h3 class=\"ion-android-contacts blog-titles\">" + jsonFiles[i].fName +
+            jsonFiles[i].fName + "\'>" + "<h3 class=\"ion-android-contacts blog-titles\">" + jsonData.name +
             "</h3></a></figure>\n"
         }
-        this.readTextFile('view/blogHome.html', this.renderHome.bind(this));
 
-        // 2. transform each of them to markup
-        // 3. augment this on index.html
-        // 4. write a new index.html to the file system
+        // !IMP 03. augment this on index.html
+        this.readTextFile('view/blogHome.html', this.buildPage.bind(this));
     };
 
     // Step 1: read the posts in md format
@@ -60,23 +63,26 @@ function Build() {
 
 
     // Step4: augment the md content and request to gen index.html
-    this.renderHome = function renderPost(html) {
-        var responseContent = this.mustache(html, { postContent: this.htmlContent });
-        responseContent = this.mustache(responseContent, { navigation: this.navigationContent });
-        this.writeToFile(responseContent);
+    this.buildPage = function renderPost(html) {
+      var responseContent = this.mustache(html,            { postContent: this.htmlContent });
+      responseContent     = this.mustache(responseContent, { navigation: this.navigationContent });
+      responseContent     = this.mustache(responseContent, { blogTitle: config.blogTitle });
+
+      // !IMP 04. write a new index.html to the file system
+      this.writeToFile(responseContent);
     };
 
     // For Step 3
     this.mustache = function(text, data) {
-        var result = text;
-        for (var prop in data) {
-            if (data.hasOwnProperty(prop)) {
-                console.log(data);
-                var regExp = new RegExp('{{' + prop + '}}', 'g');
-                result = result.replace(regExp, data[prop]);
-            }
+      var result = text;
+      for (var prop in data) {
+        if (data.hasOwnProperty(prop)) {
+          // DEBUG :=> console.log(data);
+          var regExp = new RegExp('{{' + prop + '}}', 'g');
+          result = result.replace(regExp, data[prop]);
         }
-        return result;
+      }
+      return result;
     }
 
     // Reads a single File
@@ -97,7 +103,6 @@ function Build() {
         }
 
         var filePath = pathFolder + '/index.html';
-
         fs.exists(filePath, function(exists) {
             if(exists) {
                 fs.unlinkSync(filePath);
