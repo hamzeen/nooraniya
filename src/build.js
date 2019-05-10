@@ -61,12 +61,12 @@ function Build() {
 
     // Step 4: writes the augmented html file
     this.buildPage = function renderPost(interimHtml) {
-      var outputHtml = this.mustache(interimHtml, { postContent: this.htmlContent });
-      outputHtml     = this.mustache(outputHtml, { navigation: this.navigationContent });
-      outputHtml     = this.mustache(outputHtml, { blogTitle: config.blogTitle });
+      var html = this.mustache(interimHtml, { postContent: this.htmlContent });
+      html     = this.mustache(html, { navigation: this.navigationContent });
+      html     = this.mustache(html, { blogTitle: config.blogTitle });
 
       // !IMP 04. write a new index.html to the file system
-      this.writeToFile(finalHtml);
+      this.writeToFile(html);
     };
 
     // Step 3:
