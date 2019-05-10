@@ -41,7 +41,7 @@ function Build() {
         var list = [];
 
         if (fs.existsSync(folderPath)) {
-            var files = fs.readdirSync(folderPath), i, stat, file, output, markdown;
+            var files = fs.readdirSync(folderPath), i, stat, file, markdown;
 
             for(i = 0; i < files.length; i++) {
                 file = path.resolve(folderPath, files[i]);
