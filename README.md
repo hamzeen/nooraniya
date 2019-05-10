@@ -45,7 +45,7 @@ if you dont have an editor to open json files, download this editor: https://ato
 9. `heroku open && heroku logs —tail`
 
 ## Rename a Deployed App (for admins)
-1. heroku apps:rename new --app old name
+1. heroku apps:rename 'newname' --app 'oldname'
 
 
 ## License
